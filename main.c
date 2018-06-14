@@ -2,11 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include "main.h"
-struct UserList *list, *head, *tail;
+extern struct UserList *list, *head, *tail;
 const char userPassword[]="qwer1234";
 int main(){
   int serviceNumber;
-  do{  
+ do{  
     printf("전화번호 관리\n\n");
     printf("1.등록\t2.전체검색\t3.특정인검색\t4.제거\t5.종료\n\n");
     printf("메뉴 선택 : ");

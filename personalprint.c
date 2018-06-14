@@ -10,7 +10,7 @@ void findInformation(struct UserList *list){
  printf("\n");
  list = head;
 while(list != NULL) {
-  if(strcmp(findName, list->userName) == 0){
+  if(!strcmp(findName, list->userName)){
    printf("%s\t%s\n", list->userName, list->userPhoneNumber);
    break;
   }

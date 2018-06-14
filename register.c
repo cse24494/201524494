@@ -4,22 +4,18 @@
 #include "main.h"
 
 extern const char userPassword[];
-struct UserList* list;
-struct UserList* head;
-struct UserList* tail;
+struct UserList *list, *head = NULL, *tail = NULL;
 void enrollInformation(struct UserList *list) {
   char password[10];
   static int errorCount = 0;
   const char userPassword[]="qwer1234";
-
-  head = NULL;
-  tail = NULL;
-  list = (UserList *)malloc(sizeof(UserList)); 
+  list = (struct UserList *)malloc(sizeof(struct UserList));
+ list->next = NULL;
   if(head == NULL) {
     head = list;
   } else {
    tail->next = list;
-   }
+   }    
    tail = list;
  printf("비밀번호를 입력하세요.\n");
  do{
@@ -30,8 +26,9 @@ void enrollInformation(struct UserList *list) {
     printf("전화번호 : ");
     scanf("%s", list->userPhoneNumber);
     printf("%s 정보 등록 완료!\n\n", list->userName);
-    errorCount = 0;
-    break;
+    errorCount = 0; 
+   
+   break;
   }
   else if(strncmp(userPassword, password, 8) != 0) {
    errorCount++;
