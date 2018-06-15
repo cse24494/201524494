@@ -3,9 +3,9 @@
 #define MAX_PHONE_NUMBER 20
 
 struct UserList{
-  char userName[MAX_NAME_LINE];
-  char userPhoneNumber[MAX_PHONE_NUMBER];
-  struct UserList *next;
+   char userName[MAX_NAME_LINE];
+   char userPhoneNumber[MAX_PHONE_NUMBER];
+   struct UserList *next;
 };
 
 void enrollInformation(struct UserList *list);

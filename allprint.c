@@ -11,4 +11,5 @@ void printAllInformation(struct UserList *list){
  list = list->next;
  }
  printf("\n");
+
 }
